@@ -1,0 +1,26 @@
+/* 
+Title : LocalTimeClass
+Author : Adrian Lee
+Date : 2020.02.22
+Description : LocalTimeClass Basic Example
+*/
+
+// String to Time
+String line = "23:59:59.999"
+LocalTime endTime = LocalTime.parse(line);
+
+// Second to Millisecond
+double second = Double.parseDouble(Linearray[2].split("s")[0]);
+long millisecond = TimeUnit.MILLISECONDS.toMillis((long) (second*1000));
+
+// LocalTIme minus
+LocalTime start = end.minus(999, ChronoField.MILLI_OF_SECOND.getBaseUnit());
+
+// LocalTime plus
+LocalTime end = start.plus(999,ChronoField.MILLI_OF_SECOND.getBaseUnit());
+
+// isAfter
+boolean a = end.isAfter(start);
+
+// isBefore
+boolean b = start.isAfter(end);
